@@ -1,4 +1,4 @@
-package artless;
+package com.Artless;
 
 
 public class WebElementsLocation {
@@ -11,6 +11,7 @@ public class WebElementsLocation {
     private String messagePath = "//textarea[@id = 'wiadomosc']";
     private String submitPath = "//input[@type = 'submit']";
     private String thanksText = "//div[@id='thanks']//b";
+    private String firstImageCssSelector = "img[src='projekt/1.1.jpg']";
 
     public WebElementsLocation() {
     }
@@ -45,5 +46,9 @@ public class WebElementsLocation {
 
     public String getThanksText() {
         return thanksText;
+    }
+
+    public String getFirstImageCssSelector() {
+        return firstImageCssSelector;
     }
 }

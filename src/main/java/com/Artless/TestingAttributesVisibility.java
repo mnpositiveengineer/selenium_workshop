@@ -1,4 +1,4 @@
-package artless;
+package com.Artless;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
