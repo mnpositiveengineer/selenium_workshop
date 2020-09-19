@@ -31,7 +31,7 @@ public class TestingHoversWithScreenshots {
 
         try {
             WebElementsLocation wel = new WebElementsLocation();
-            WebElement firstImage = driver.findElement(By.cssSelector(wel.getFirstImageCssSelector()));
+            WebElement firstImage = driver.findElement(By.xpath(wel.getFirstImagePath()));
             Actions builder = new Actions(driver);
             builder.moveToElement(firstImage).build().perform();
 
