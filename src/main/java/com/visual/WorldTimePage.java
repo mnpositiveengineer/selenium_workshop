@@ -4,7 +4,6 @@ import com.testautomationguru.ocular.Ocular;
 import com.testautomationguru.ocular.snapshot.Snap;
 import org.openqa.selenium.WebDriver;
 
-// KLASA REPREZENTUJĄCA STRONĘ INTERNETOWĄ WG PAGE OBJECT MODEL
 @Snap("WorldTime.png")
 public class WorldTimePage {
 
