@@ -1,13 +1,16 @@
-package com.Artless;
+package com.Artless.ChromeSuite;
 
+import com.Artless.WebElementsLocation;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class TestingMandatoryEmailTest {
 
@@ -17,10 +20,12 @@ public class TestingMandatoryEmailTest {
 
     @BeforeTest
     public void setBaseUrl() {
-        System.setProperty("webdriver.gecko.driver", "C:/selenium-drivers/Firefox/geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "C:/selenium-drivers/Chrome/chromedriver.exe");
+        driver = new ChromeDriver();
         wel = new WebElementsLocation();
         driver.get(baseUrl);
+//        Dimension d = new Dimension(360,740);
+//        driver.manage().window().setSize(d);
     }
 
     @Test

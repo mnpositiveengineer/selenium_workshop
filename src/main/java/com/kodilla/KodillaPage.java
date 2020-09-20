@@ -1,4 +1,4 @@
-package com.youtube.selenium.kodilla;
+package com.kodilla;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;

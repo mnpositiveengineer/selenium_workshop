@@ -1,25 +1,31 @@
-package com.Artless;
+package com.Artless.ChromeSuite;
 
+import com.Artless.WebElementsLocation;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import java.util.concurrent.TimeUnit;
 
 public class OpeningProjectPageTest {
 
     private String baseUrl = "https://artlessdesign.pl/";
     private WebDriver driver;
     private WebElementsLocation wel;
-    private Actions builder;
 
     @BeforeTest
     public void setBaseUrl() {
-        System.setProperty("webdriver.gecko.driver", "C:/selenium-drivers/Firefox/geckodriver.exe");
-        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "C:/selenium-drivers/Chrome/chromedriver.exe");
+        driver = new ChromeDriver();
         wel = new WebElementsLocation();
         driver.get(baseUrl);
+        Dimension d = new Dimension(360,740);
+        driver.manage().window().setSize(d);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @AfterTest

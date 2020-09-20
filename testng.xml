@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/selenium_workshop">
+<suite name="All Test Suite" thread-count="2" parallel="tests">
+    <listeners>
+        <listener class-name = "com.Artless.ListenersTestNG"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="FireFox Testing">
         <classes>
-            <class name="com.Artless.OpeningProjectPageTest">
-                <methods>
-                    <include name="firstProject"/>
-                    <include name="secondProject"/>
-                    <include name="thirdProject"/>
-                    <include name="fourthProject"/>
-                    <include name="fifthProject"/>
-                    <include name="sixthProject"/>
-                </methods>
-            </class>
-            <class name="com.Artless.TestingAttributesVisibilityTest">
-                <methods>
-                    <include name="emailIsDisplayed"/>
-                    <include name="projectIsDisplayed"/>
-                    <include name="cityIsDisplayed"/>
-                    <include name="areaIsDisplayed"/>
-                    <include name="deadlineIsDisplayed"/>
-                    <include name="messageIsDisplayed"/>
-                </methods>
-            </class>
-            <class name="com.Artless.TestingListsOfValuesForProjectTest">
-                <methods>
-                    <include name="ProjectListOfValuesIsCorrect"/>
-                </methods>
-            </class>
-            <class name="com.Artless.TestingMandatoryEmailTest">
-                <methods>
-                    <include name="isEmailMandatory"/>
-                </methods>
-            </class>
-            <class name="com.Artless.TestingSendingFormTest">
-                <methods>
-                    <include name="isFormSent"/>
-                    <include name="isMessageDisplayed"/>
-                    <include name="isMessageCorrect"/>
-                </methods>
-            </class>
+            <class name="com.Artless.FirefoxSuite.OpeningProjectPageTest"/>
+            <class name="com.Artless.FirefoxSuite.TestingAttributesVisibilityTest"/>
+            <class name="com.Artless.FirefoxSuite.TestingListsOfValuesForProjectTest"/>
+            <class name="com.Artless.FirefoxSuite.TestingMandatoryEmailTest"/>
+            <class name="com.Artless.FirefoxSuite.TestingSendingFormTest"/>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Chrome Testing">
+        <classes>
+            <class name="com.Artless.ChromeSuite.OpeningProjectPageTest"/>
+            <class name="com.Artless.ChromeSuite.TestingAttributesVisibilityTest"/>
+            <class name="com.Artless.ChromeSuite.TestingListsOfValuesForProjectTest"/>
+            <class name="com.Artless.ChromeSuite.TestingMandatoryEmailTest"/>
+            <class name="com.Artless.ChromeSuite.TestingSendingFormTest"/>
         </classes>
     </test>
 </suite>
